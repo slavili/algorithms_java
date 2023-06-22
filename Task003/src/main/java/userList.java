@@ -26,6 +26,25 @@ public class userList {
         }
     }
 
+    public void revert(){
+        Node tempCurrent = head;
+
+        while(tempCurrent != null){
+            if(tempCurrent.previous == null){
+                head = tail;
+                tail = tempCurrent;
+            }
+            Node next = tempCurrent.next;
+            Node previous = tempCurrent.previous;
+
+            tempCurrent.next = previous;
+            tempCurrent.previous = next;
+
+            tempCurrent = next;
+        }
+
+    }
+
     public class Node{
         int value;
         Node next;

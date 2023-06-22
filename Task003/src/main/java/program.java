@@ -8,7 +8,11 @@ public class program {
         u1.add(12);
         u1.add(13);
         u1.add(14);
+
+        u1.selectAll();
+        u1.revert();
         System.out.println("****************************");
+
         u1.selectAll();
     }
 }
