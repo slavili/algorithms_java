@@ -18,7 +18,13 @@ public class userList {
         }
     }
 
-
+    public void selectAll(){
+        Node tempNode = head;
+        while(tempNode != null){
+            System.out.println(tempNode + " = " + tempNode.value);
+            tempNode = tempNode.next;
+        }
+    }
 
     public class Node{
         int value;
